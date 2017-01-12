@@ -1,0 +1,283 @@
+//Fonts
+$head-font: 'Fira Sans', sans-serif;
+$cursive: 'Bungee Shade', cursive;
+
+
+//Sass color theme creators
+$white: #FFFFFF;
+@mixin colors($background, $color) {
+  background-color: $background;
+  color: $color;
+}
+
+
+.play-lists {
+  @include colors(#3c763d, #FFFFFF);
+  .summary-footer {
+    @include colors(green, white);
+  }
+}
+.genres {
+  @include colors(#428bca, #FFFFFF);
+  .summary-footer {
+    @include colors(#2b669a, white);
+  }
+}
+
+.music {
+  @include colors(#a528ca, #FFFFFF);
+  .summary-footer {
+    @include colors(#7e189a, white);
+  }
+}
+
+.download {
+  @include colors(#ca8110, #FFFFFF);
+  .summary-footer {
+    @include colors(#9a4712, white);
+  }
+}
+
+
+//next
+//.genres {
+//  @include colors(#2b669a, white);
+//}
+//.play-lists {
+//  @include colors(green, white);
+//}
+
+.pdsa-summary-block {
+  position: relative;
+  width: 100%;
+  margin: 0.3em;
+  padding: 1em;
+  min-height: 15em;
+
+
+  .summary-footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    padding: .4em;
+    font-weight: 400;
+    text-transform: uppercase;
+    opacity: .6;
+    font-size: small;
+
+    &:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
+    a {
+      text-decoration: none;
+      color: $white;
+    }
+  }
+
+  .summary-body {
+    position: absolute;
+    top: 1.3em;
+    right: .8em;
+    .summary-line-1 {
+      text-align: right;
+      font-size: xx-large;
+    }
+    .summary-line-2 {
+      text-align: right;
+      font-size: medium;
+
+    }
+  }
+  div {
+    margin-left: -0.4em;
+    margin-top: .1em;
+    font-size: 1em;
+  }
+  i {
+    margin-left: -0.3em;
+    margin-top: .1em;
+    font-size: 2em;
+    opacity: .3;
+
+  }
+}
+
+//Titles and headers
+.header-title {
+  font-size: 2em;
+  font-family: $cursive;
+}
+
+
+
+//Icon formatting
+i.glyphicon.glyphicon-globe, i.glyphicon.glyphicon-list-alt, i.glyphicon.glyphicon-music, i.glyphicon.glyphicon-download {
+  font-size: 9em;
+}
+
+i.glyphicon.glyphicon-chevron-right {
+  float: right;
+}
+
+.globe-icon {
+  position: relative;
+  overflow: hidden;
+}
+
+
+$color: #3E1C53;
+//$image: "Assets/mymusic-banner.jpg";
+
+header {
+  background-color: $color;
+  a {
+    background-color: #A528CA;
+  }
+}
+
+.pdsa-readme-box {
+  position: relative;
+  border: thin solid #31708f;
+  width: 100%;
+  padding: 1em;
+  opacity: .9;
+  margin: .3em;
+  min-height: 16em;
+  background-color: rgba(0, 221, 255, 0.75);
+  .readme-header {
+    padding: .5em;
+    margin: -1em;
+    background-color: #31708f;
+    text-align: center;
+    i, div {
+      font-size: xx-large;
+    }
+  }
+  .readme-body {
+    position: relative;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    h1 {
+      font-size: x-large;
+    }
+    p {
+      font-size: medium;
+    }
+  }
+
+  .readme-footer {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding-bottom: .5em;
+    font-size: small;
+    a {
+      text-decoration: none;
+      color: #7e189a;
+      &:hover {
+        opacity: 1;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+
+
+body {
+  background-image: url("https://d2c87l0yth4zbw-2.global.ssl.fastly.net/i/home/bg-albums.png");
+  //padding-bottom: 350px;
+}
+
+.pdsa-sn-wrapper {
+  position: absolute;
+  top: 6.7em;
+  left: 0em;
+  width: 13em;
+  height: 100%;
+  background-color: black;
+  transition: left 0.3s linear;
+  -moz-transition: left 0.3s linear;
+  -webkit-transition: left 0.3s linear;
+  font-family: $head-font;
+}
+
+.pdsa-sn-wrapper ul {
+  width: 11em;
+  list-style: none;
+  margin-top: 2em;
+  margin-left: 1em;
+  padding: 0em; }
+
+.pdsa-sn-wrapper ul li,
+.pdsa-sn-wrapper ul li ul li {
+  margin-top: 1em;
+  margin-bottom: 0.5em; }
+
+.pdsa-sn-wrapper ul li a,
+.pdsa-sn-wrapper ul li ul li a {
+  color: #999999;
+  text-decoration: none;
+  padding: .5em;
+
+}
+
+.pdsa-sn-wrapper ul li a:hover,
+.pdsa-sn-wrapper ul li ul li a:hover {
+  color: #fff;
+  text-decoration: none; }
+
+.pdsa-sn-wrapper ul li a:active,
+.pdsa-sn-wrapper ul li a:focus,
+.pdsa-sn-wrapper ul li ul li a:active,
+.pdsa-sn-wrapper ul li ul li a:focus {
+  text-decoration: none;
+  outline: none;
+  color: white; }
+
+.pdsa-sn-wrapper ul .pdsa-sn-brand {
+  margin-left: -.5em;
+  font-size: large;
+  color: white; }
+
+.pdsa-sn-wrapper ul .pdsa-sn-brand a {
+  color: white; }
+
+.pdsa-sn-wrapper ul .pdsa-sn-brand a:hover {
+  color: lightblue;
+  background: none; }
+
+/* Style for 2nd level */
+.pdsa-sn-wrapper ul li ul {
+  list-style: none;
+  margin-top: 1em;
+  margin-left: 1em; }
+
+/* Add <span> for sm, md, lg breakpoints */
+.pdsa-sn-wrapper ul li a span {
+  margin-top: -1em;
+  margin-bottom: -1em;
+  margin-left: 1em;
+  padding-top: -1em;
+  padding-bottom: -1em; }
+
+header {
+  padding: 1.2em;
+  color: white;
+  font-size: large;
+}
+
+
+@media all and (max-width: 768px) {
+  .pdsa-sn-wrapper {
+    left: -10em; }
+  .pdsa-sn-wrapper ul li a i {
+    padding-left: 10em;
+    margin-top: -1em;
+    margin-bottom: -1em; }
+  .body-content {
+    margin-left: 5em; } }
